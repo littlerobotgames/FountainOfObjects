@@ -16,6 +16,12 @@ namespace FountainOfObjects
             Discovered = true;
             if (entity != null)
             {
+                if (entity is Monster)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"{entity.Name} is in the room");
+                }
+                
                 return entity.actions;
             }
             return new List<PlayerAction>();

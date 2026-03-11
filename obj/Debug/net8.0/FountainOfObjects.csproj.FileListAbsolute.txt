@@ -12,3 +12,18 @@ C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\ob
 C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.pdb
 C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.genruntimeconfig.cache
 C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\ref\FountainOfObjects.dll
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.exe
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.deps.json
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.runtimeconfig.json
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.dll
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.pdb
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.AssemblyInfo.cs
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.sourcelink.json
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.dll
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\refint\FountainOfObjects.dll
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.pdb
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.genruntimeconfig.cache
+C:\Users\User\OneDrive\Documents\ProgrammingFundamentalsSnow2025\FountainOfObjects\obj\Debug\net8.0\ref\FountainOfObjects.dll

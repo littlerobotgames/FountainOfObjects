@@ -1,30 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\",
+  "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\alex\\onedrive\\documents\\college cringe\\programming\\fountainofobjects\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\user\\onedrive\\documents\\programmingfundamentalssnow2025\\fountainofobjects\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\alex\\onedrive\\documents\\college cringe\\programming\\fountainofobjects\\monsters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\user\\onedrive\\documents\\programmingfundamentalssnow2025\\fountainofobjects\\monsters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:monsters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\alex\\onedrive\\documents\\college cringe\\programming\\fountainofobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\user\\onedrive\\documents\\programmingfundamentalssnow2025\\fountainofobjects\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\alex\\onedrive\\documents\\college cringe\\programming\\fountainofobjects\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\alex\\onedrive\\documents\\college cringe\\programming\\fountainofobjects\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\user\\onedrive\\documents\\programmingfundamentalssnow2025\\fountainofobjects\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\alex\\onedrive\\documents\\college cringe\\programming\\fountainofobjects\\items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:items.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\user\\onedrive\\documents\\programmingfundamentalssnow2025\\fountainofobjects\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\user\\onedrive\\documents\\programmingfundamentalssnow2025\\fountainofobjects\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|c:\\users\\user\\onedrive\\documents\\programmingfundamentalssnow2025\\fountainofobjects\\logline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B78EB060-7E4B-45E0-BFAC-99C56CD8B68A}|FountainOfObjects.csproj|solutionrelative:logline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,17 +38,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Player.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Player.cs",
               "RelativeDocumentMoniker": "Player.cs",
-              "ToolTip": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Player.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Player.cs",
               "RelativeToolTip": "Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCAAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-11T01:04:10.203Z",
               "IsPinned": true,
@@ -56,13 +60,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "LogLine.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\LogLine.cs",
+              "RelativeDocumentMoniker": "LogLine.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\LogLine.cs",
+              "RelativeToolTip": "LogLine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-11T03:42:05.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Room.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Room.cs",
               "RelativeDocumentMoniker": "Room.cs",
-              "ToolTip": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Room.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Room.cs",
               "RelativeToolTip": "Room.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-11T01:31:44.79Z",
               "EditorCaption": ""
@@ -71,37 +88,37 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Monsters.cs",
-              "DocumentMoniker": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Monsters.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Monsters.cs",
               "RelativeDocumentMoniker": "Monsters.cs",
-              "ToolTip": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Monsters.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Monsters.cs",
               "RelativeToolTip": "Monsters.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAmwCYAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-11T01:14:43.813Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Items.cs",
-              "DocumentMoniker": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Items.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Items.cs",
               "RelativeDocumentMoniker": "Items.cs",
-              "ToolTip": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Items.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Items.cs",
               "RelativeToolTip": "Items.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAiwBwAAADZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-11T00:58:06.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Entity.cs",
-              "DocumentMoniker": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Entity.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Entity.cs",
               "RelativeDocumentMoniker": "Entity.cs",
-              "ToolTip": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Entity.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Entity.cs",
               "RelativeToolTip": "Entity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAADwv1wAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-11T00:56:13.519Z",
               "EditorCaption": ""
@@ -110,11 +127,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\alex\\OneDrive\\Documents\\College Cringe\\Programming\\FountainOfObjects\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Documents\\ProgrammingFundamentalsSnow2025\\FountainOfObjects\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAANYAAAAAAAAAAAAewNIAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAADwv4oAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-10T01:18:20.363Z",
               "EditorCaption": ""

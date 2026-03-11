@@ -8,20 +8,16 @@ namespace FountainOfObjects
 {
     public class Monster : CombatEntity
     {
+        public bool FirstTurn = true;
         public int Difficulty { get; set; }
 
         public Monster()
         {
             actions.Add(new PlayerAction("Fight", Fight));
-            actions.Add(new PlayerAction("Attempt to Flee", Flee));
         }
         public void Fight()
         {
-
-        }
-        public void Flee()
-        {
-
+            Program.gameState = Program.GameState.Fighting;
         }
     }
     public class Goblin : Monster
@@ -30,11 +26,41 @@ namespace FountainOfObjects
         {
             Name = "Goblin";
             Health = 5;
+            MaxHealth = Health;
             Accuracy = 35;
-            Dodge = 30;
+            Dodge = 10;
             Strength = 1;
             Difficulty = 1;
-            AddItem(new ItemDagger());
+            AddItem(new ItemDagger(), false);
+
+            Random r = new Random();
+            
+            if (r.Next(4) == 0)
+            {
+                AddItem(new ConsumePotionSmall(), false);
+            }
         }
+    }
+    public class Amarok : Monster
+    {
+        public Amarok()
+        {
+            Name = "Amarok";
+            Health = 12;
+            MaxHealth = Health;
+            Accuracy = 15;
+            Dodge = 12;
+            Difficulty = 2;
+            AddItem(new ItemGreatSword(), false);
+
+            Random r = new Random();
+
+            if (r.Next(4) == 0)
+            {
+                AddItem(new ConsumePotionMedium(), false);
+            }
+        }
+
+
     }
 }

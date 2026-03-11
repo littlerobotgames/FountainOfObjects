@@ -6,11 +6,12 @@ namespace FountainOfObjects
 {
     class Program
     {
-        public enum GameState { Playing, Won, Lost }
-        public static GameState gameState = GameState.Playing;
-        public enum Difficulty { Easy, Medium, Hard}
+        public enum GameState { Exploring, Fighting, Won, Lost }
+        public static GameState gameState = GameState.Exploring;
+        public enum Difficulty { Easy, Medium, Hard }
         public static Difficulty gameDifficulty = Difficulty.Easy;
         public static Cave cave;
+        public static List<LogLine> gameLog = new List<LogLine>();
         public static void Main(string[] args)
         {
             int caveWidth = 4;
@@ -49,7 +50,7 @@ namespace FountainOfObjects
 
             cave.Initialize();
 
-            while (gameState == GameState.Playing)
+            while (gameState == GameState.Exploring || gameState == GameState.Fighting)
             {
                 UpdateScreen();
                 Room room = cave.GetPlayerRoom();
@@ -57,33 +58,57 @@ namespace FountainOfObjects
                 Console.ForegroundColor = ConsoleColor.White;
                 
                 actions.Clear();
-                List<PlayerAction> roomActions = room.EnterRoom();
 
-                //Add room actions
-                for (int i = 0; i < roomActions.Count; i++)
+                if (gameState == GameState.Exploring)
                 {
-                    actions.Add(roomActions[i]);
-                }
-                if (room.entity != null)
-                {
-                    if (room.entity.GetType() != typeof(Monster))
+                    List<PlayerAction> roomActions = room.EnterRoom();
+                    //Add room actions
+                    for (int i = 0; i < roomActions.Count; i++)
                     {
-                        //If there's no monster, allow the player to move
-                        if (cave.PlayerY > 0) actions.Add(new PlayerAction("Move Up", () => cave.MovePlayer(0, -1)));
-                        if (cave.PlayerX < caveHeight - 1) actions.Add(new PlayerAction("Move Right", () => cave.MovePlayer(1, 0)));
-                        if (cave.PlayerY < caveHeight - 1) actions.Add(new PlayerAction("Move Down", () => cave.MovePlayer(0, 1)));
-                        if (cave.PlayerX > 0) actions.Add(new PlayerAction("Move Left", () => cave.MovePlayer(-1, 0)));
+                        actions.Add(roomActions[i]);
+                    }
+
+                    if (room.entity != null)
+                    {
+                        if (room.entity is not Monster)
+                        {
+                            //If there's no monster, allow the player to move
+                            AddPlayerBasicMovement(ref actions);
+                        }
+                        else
+                        {
+                            actions.Add(new PlayerAction($"Flee [{cave.player.Dodge}%]", cave.player.Flee));
+                        }
+                    }
+                    else
+                    {
+                        AddPlayerBasicMovement(ref actions);
                     }
                 }
-                else
+                if (gameState == GameState.Fighting)
                 {
-                    if (cave.PlayerY > 0) actions.Add(new PlayerAction("Move Up", () => cave.MovePlayer(0, -1)));
-                    if (cave.PlayerX < caveHeight - 1) actions.Add(new PlayerAction("Move Right", () => cave.MovePlayer(1, 0)));
-                    if (cave.PlayerY < caveHeight - 1) actions.Add(new PlayerAction("Move Down", () => cave.MovePlayer(0, 1)));
-                    if (cave.PlayerX > 0) actions.Add(new PlayerAction("Move Left", () => cave.MovePlayer(-1, 0)));
+                    Player player = cave.player;
+                    Monster monster = (Monster)room.entity;
+                    foreach (Item item in player.items)
+                    {
+                        if (item is Weapon)
+                        {
+                            Weapon weapon = (Weapon)item;
+                            actions.Add(new PlayerAction(weapon.GetDescription(player, monster), () => player.Attack(monster, weapon)));
+                        }
+                        if (item is Consumable)
+                        {
+                            Consumable consumable = (Consumable)item;
+                            actions.Add(new PlayerAction($"Use {consumable.GetDescription()}", () => consumable.Use(player)));
+                        }
+                    }
+
+                    UpdateScreen();
                 }
 
-                    Console.WriteLine();
+                UpdateLog();
+
+                Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.White;
 
                 Console.WriteLine("What do you want to do?");
@@ -95,15 +120,37 @@ namespace FountainOfObjects
                 int input = Convert.ToInt16(Console.ReadLine());
 
                 actions[input].Action();
+
+                cave.CheckForDead();
+
+                if (gameState == GameState.Fighting)
+                {
+                    Monster monster = (Monster)room.entity;
+
+                    if (monster.FirstTurn)
+                    {
+                        monster.FirstTurn = false;
+                    }
+                    else
+                    {
+                        monster.Attack(cave.player, (Weapon)monster.items[0]);
+
+                        if (cave.player.Health <= 0)
+                        {
+                            gameState = GameState.Lost;
+                        }
+                    }
+                        
+                }
             }
 
             if (gameState == GameState.Won)
             {
-                Console.WriteLine("Congratulations! You've won!");
+                Console.WriteLine("Congratulations! You've escaped!");
             }
             else
             {
-                Console.WriteLine("You've lost...");
+                Console.WriteLine("You've died...");
             }
 
         }
@@ -113,6 +160,55 @@ namespace FountainOfObjects
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine($"Fountain of Objects");
             cave.UpdateCave();
+
+            if (gameState == GameState.Fighting)
+            {
+                Entity entity = cave.GetPlayerRoom().entity;
+
+                if (entity != null)
+                {
+                    Monster monster = (Monster)entity;
+
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"You: {cave.player.Health}\t\t\t{monster.Name}: {monster.Health}");
+                }
+            }
+        }
+        public static void UpdateLog()
+        {
+            (int ConsoleX, int ConsoleY) consolePosPre = Console.GetCursorPosition();
+
+            int printX = (cave.CaveWidth * 5) + 5;
+            int printY = 1;
+
+            foreach(LogLine logLine in gameLog)
+            {
+                Console.SetCursorPosition(printX, printY);
+                logLine.Print();
+                printY++;
+            }
+
+            Console.SetCursorPosition(consolePosPre.ConsoleX, consolePosPre.ConsoleY);
+        }
+        public static void AddLog(LogLine logLine)
+        {
+            gameLog.Add(logLine);
+
+            if (gameLog.Count > 10)
+            {
+                gameLog.RemoveAt(0);
+            }
+        }
+        public static void AddPlayerBasicMovement(ref List<PlayerAction> actions)
+        {
+            if (cave.PlayerY > 0) actions.Add(new PlayerAction("Move Up", () => cave.MovePlayer(0, -1)));
+            if (cave.PlayerX < cave.CaveHeight - 1) actions.Add(new PlayerAction("Move Right", () => cave.MovePlayer(1, 0)));
+            if (cave.PlayerY < cave.CaveHeight - 1) actions.Add(new PlayerAction("Move Down", () => cave.MovePlayer(0, 1)));
+            if (cave.PlayerX > 0) actions.Add(new PlayerAction("Move Left", () => cave.MovePlayer(-1, 0)));
+        }
+        public static void GameStateUpdate(GameState state)
+        {
+            gameState = state;
         }
         public class Cave
         {
@@ -122,8 +218,13 @@ namespace FountainOfObjects
             public FountainOfObjects fountain = new FountainOfObjects();
             public Player player = new Player();
 
+            public int CaveWidth = 0;
+            public int CaveHeight = 0;
+
             public Cave(int width, int height)
             {
+                CaveWidth = width;
+                CaveHeight = height;
                 rooms = new Room[width, height];
             }
             public void Initialize()
@@ -147,7 +248,8 @@ namespace FountainOfObjects
                         difficultyMod = 4;
                         break;
                 }
-                int goblins = r.Next(2, 4) * difficultyMod;
+                int goblins = r.Next(2 * difficultyMod, 4 * difficultyMod);
+                int amaroks = difficultyMod;
 
                 //Place Fountain room
                 if (r.Next(2) == 0)
@@ -177,6 +279,20 @@ namespace FountainOfObjects
                     rooms[placeX, placeY].entity = new Goblin();
                     goblins--;
                 }
+                while (amaroks > 0)
+                {
+                    int placeX = r.Next(1, rooms.GetLength(0));
+                    int placeY = r.Next(1, rooms.GetLength(1));
+
+                    while (rooms[placeX, placeY].entity != null)
+                    {
+                        placeX = r.Next(1, rooms.GetLength(0));
+                        placeY = r.Next(1, rooms.GetLength(1));
+                    }
+
+                    rooms[placeX, placeY].entity = new Amarok();
+                    amaroks--;
+                }
             }
             public void UpdateCave()
             {
@@ -188,7 +304,20 @@ namespace FountainOfObjects
                         Room room = rooms[xx, yy];
 
                         Console.SetCursorPosition(xx * 5, (yy * 3) + 1);
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
+
+                        if (xx == 0 && yy == 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                        }
+                        else if (room.Discovered)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                        }
+                            
                         Console.WriteLine("╔   ╗");
 
                         Console.SetCursorPosition(xx * 5, (yy * 3) + 2);
@@ -201,10 +330,10 @@ namespace FountainOfObjects
                         {
                             if (room.Discovered)
                             {
-                                if (room.entity != null)
+                                if (room.entity is FountainOfObjects)
                                 {
-                                    Console.ForegroundColor = ConsoleColor.Red;
-                                    Console.WriteLine($"  X  ");
+                                    Console.ForegroundColor = ConsoleColor.Blue;
+                                    Console.WriteLine($"  F  ");
                                 }
                                 else
                                 {
@@ -216,8 +345,18 @@ namespace FountainOfObjects
                                 Console.WriteLine($"     ");
                             }
                         }
-
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        if (xx == 0 && yy == 0)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                        }
+                        else if (room.Discovered)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Gray;
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkGray;
+                        }
                         Console.SetCursorPosition(xx * 5, (yy * 3) + 3);
                         Console.WriteLine("╚   ╝");
                     }
@@ -239,6 +378,24 @@ namespace FountainOfObjects
             public Room GetPlayerRoom()
             {
                 return rooms[PlayerX, PlayerY];
+            }
+            public void CheckForDead()
+            {
+                Room room = GetPlayerRoom();
+                
+                if (room.entity != null)
+                {
+                    if (room.entity is Monster)
+                    {
+                        Monster entity = (Monster)room.entity;
+                        
+                        if (entity.dead)
+                        {
+                            room.entity = null;
+                            gameState = GameState.Exploring;
+                        }
+                    }
+                }
             }
         }
     }
