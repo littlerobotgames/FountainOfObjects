@@ -1,0 +1,14 @@
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.exe
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.deps.json
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.runtimeconfig.json
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.dll
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\bin\Debug\net8.0\FountainOfObjects.pdb
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.AssemblyInfoInputs.cache
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.AssemblyInfo.cs
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.csproj.CoreCompileInputs.cache
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.dll
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\refint\FountainOfObjects.dll
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.pdb
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\FountainOfObjects.genruntimeconfig.cache
+C:\Users\alex\OneDrive\Documents\College Cringe\Programming\FountainOfObjects\obj\Debug\net8.0\ref\FountainOfObjects.dll
